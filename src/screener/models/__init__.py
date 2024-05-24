@@ -1,3 +1,4 @@
-from .Quote import Quote
+from .close import Close
+from .quote import Quote
 
-__all__ = [Quote]
+__all__ = [Close, Quote]

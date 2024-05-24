@@ -24,6 +24,8 @@ click==8.1.7
     # via uvicorn
 dnspython==2.6.1
     # via email-validator
+duckdb==0.10.3
+    # via screener
 email-validator==2.1.1
     # via fastapi
 fastapi==0.111.0
@@ -51,9 +53,13 @@ markupsafe==2.1.5
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
+numpy==1.26.4
+    # via pyarrow
 orjson==3.10.3
     # via fastapi
 polygon-api-client==1.13.7
+    # via screener
+pyarrow==16.1.0
     # via screener
 pydantic==2.7.1
     # via fastapi
