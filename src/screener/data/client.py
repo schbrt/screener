@@ -1,11 +1,14 @@
-from decimal import Decimal
-from pydantic import BaseModel
+from polygon import RESTClient
+
+from screener.models import Quote
+
+client = RESTClient()
 
 
-class Quote(BaseModel):
-    symbol: str
-    price: Decimal
+def retrieve_previous_close(symbol: str) -> Quote:
+    quote = client.get_previous_close_agg(symbol)[0]
+    return Quote(symbol=symbol, price=quote.close, timestamp=quote.timestamp)
 
 
-def retrieve_symbol_data(symbol: str, start_date: str, end_date: str) -> Quote:
-    return
+out: Quote = retrieve_previous_close("AMD")
+print(out)
