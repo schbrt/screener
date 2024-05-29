@@ -1,4 +1,4 @@
-from .close import Close
+from .ohlc import OHLC
 from .quote import Quote
 
-__all__ = [Close, Quote]
+__all__ = [OHLC, Quote]

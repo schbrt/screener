@@ -1,7 +1,7 @@
 from .utils import Model
 
 
-class Quote(Model):
+class OHLC(Model):
     symbol: str
     volume: int
     timestamp: int
